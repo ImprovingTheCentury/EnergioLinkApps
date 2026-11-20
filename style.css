@@ -38,23 +38,24 @@ body{
 .hero{flex:1;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:clamp(24px,5vw,72px);padding:clamp(24px,4vw,48px) 0}
 
 /* ---------- Texto ---------- */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .kicker{display:inline-block;font-weight:600;letter-spacing:.28em;font-size:clamp(.8rem,1.4vw,1rem);color:var(--cyan);margin-bottom:14px}
 .kicker::before{content:"";display:inline-block;width:34px;height:3px;background:var(--cyan);vertical-align:middle;margin-right:12px;transform:translateY(-1px)}
 h1{font-family:"Exo 2",sans-serif;font-style:italic;font-weight:900;text-transform:uppercase;
   font-size:clamp(2.6rem,5.6vw,5.4rem);line-height:.95;letter-spacing:-.01em}
 h1 span{display:block;color:var(--orange)}
-.lead{margin-top:clamp(16px,2.4vw,28px);max-width:30em;color:var(--muted);font-weight:500;font-size:clamp(1rem,1.7vw,1.3rem);line-height:1.5}
+.lead{margin-top:clamp(16px,2.4vw,28px);max-width:30em;color:var(--muted);font-weight:500;font-size:clamp(1.15rem,2.2vw,1.7rem);line-height:1.45}
 
 /* ---------- Botones ---------- */
-.stores{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(24px,3.4vw,40px)}
-.store{display:flex;align-items:center;gap:14px;min-width:218px;padding:13px 24px 13px 20px;
+.stores{display:flex;flex-wrap:wrap;gap:18px;margin-top:clamp(24px,3.4vw,40px)}
+.store{display:flex;align-items:center;gap:18px;min-width:290px;padding:20px 34px 20px 28px;
   color:var(--white);text-decoration:none;background:rgba(255,255,255,.04);
-  border:1.5px solid rgba(255,255,255,.28);border-radius:14px;
+  border:1.5px solid rgba(255,255,255,.28);border-radius:18px;
   transition:transform .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease}
-.store svg{width:32px;height:32px;fill:currentColor;flex:none}
+.store svg{width:44px;height:44px;fill:currentColor;flex:none}
 .store span{display:flex;flex-direction:column;line-height:1.1}
-.store small{font-size:.78rem;font-weight:500;color:var(--muted);letter-spacing:.04em}
-.store b{font-size:1.45rem;font-weight:600;letter-spacing:.01em}
+.store small{font-size:1rem;font-weight:500;color:var(--muted);letter-spacing:.04em}
+.store b{font-size:2rem;font-weight:600;letter-spacing:.01em}
 .store:hover,.store:focus-visible{transform:translateY(-3px);border-color:var(--cyan);background:rgba(0,213,224,.10);box-shadow:0 10px 30px -8px rgba(0,213,224,.55);outline:none}
 .store:active{transform:translateY(0)}
 /* el botón de la tienda del dispositivo va primero y resaltado */
@@ -81,8 +82,8 @@ html[data-os="ios"] #ios{border-color:var(--orange);background:rgba(255,124,2,.1
   .emblem{order:-1;width:min(56vw,250px)}
   .copy{display:flex;flex-direction:column;align-items:center}
   .kicker::before{display:none}
-  .stores{flex-direction:column;align-items:stretch;width:100%;max-width:340px}
-  .store{justify-content:center}
+  .stores{flex-direction:column;align-items:stretch;width:100%;max-width:420px}
+  .store{justify-content:center;min-width:0}
   .glow{right:50%;transform:translate(50%,-72%);width:90vmin;height:90vmin}
   .foot{justify-content:center;text-align:center}
 }
